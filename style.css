@@ -1,0 +1,165 @@
+/* সকল উপাদানের ডিফল্ট স্টাইল রিসেট */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SolaimanLipi', Arial, sans-serif; /* বাংলা ফন্ট */
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* কন্টেইনার (পেজের মাঝখানে রাখার জন্য) */
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* হেডার ডিজাইন */
+header {
+    background-color: #006a4e; /* বাংলাদেশের পতাকার সবুজ */
+    color: white;
+    padding-top: 30px;
+    min-height: 120px;
+    border-bottom: 5px solid #f42a41; /* লাল বর্ডার */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+/* মেনু বার ডিজাইন */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #f42a41; /* মাউস নিলে লাল হবে */
+}
+
+/* মেইন বডি লেআউট (ফ্লেক্সবক্স) */
+.main-body {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+/* খবরের অংশ (৭০% জায়গা নেবে) */
+.content {
+    flex: 70%;
+}
+
+/* খবরের কার্ড ডিজাইন */
+.news-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.news-card h2 {
+    color: #333;
+}
+
+.date {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    background-color: #006a4e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.read-more:hover {
+    background-color: #004d38;
+}
+
+/* সাইডবার (৩০% জায়গা নেবে) */
+.sidebar {
+    flex: 30%;
+    background: white;
+    padding: 20px;
+    height: fit-content;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+    border-bottom: 2px solid #006a4e;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    color: #f42a41;
+}
+
+/* ফুটার ডিজাইন */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* মোবাইল রেস্পনসিভ (ছোট স্ক্রিনে কেমন দেখাবে) */
+@media (max-width: 768px) {
+    .main-body {
+        flex-direction: column; /* পাশাপাশি না থেকে নিচে নিচে আসবে */
+    }
+    
+    header h1 {
+        font-size: 30px;
+    }
+    
+    nav a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+}
